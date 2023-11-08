@@ -12,14 +12,7 @@ export type borrowedBooksType = {
   id: number;
 };
 
-export const listBooks = signal([
-  {
-    bookName: "",
-    typeBook: "",
-    borrowed: false,
-    id: 0,
-  },
-]);
+export const listBooks = signal([]);
 
 // export const ListBooksValue: booksType[] = listBooks.value;
 
