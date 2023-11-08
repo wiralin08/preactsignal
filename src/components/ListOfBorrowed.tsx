@@ -23,8 +23,7 @@ const ListOfBorrower: FC = () => {
       axios
         .get("http://localhost:2000/borrowed_book")
         .then((res) => {
-          borrowedBooks.value = res.data;
-          totalBorrowed.value = borrowedBooks.value.length;
+          borrowedBooks.value = res.data
         })
         .catch((err) => {
           console.log(err);

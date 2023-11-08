@@ -1,22 +1,19 @@
-import { signal } from "@preact/signals-react";
+import { signal, computed } from '@preact/signals-react'
 
 export type booksType = {
-  bookName: string;
-  typeBook: string;
-  borrowed: boolean;
-  id: number;
-};
+    bookName: string
+    typeBook: string
+    borrowed: boolean
+    id: number
+}
 export type borrowedBooksType = {
-  bookName: string;
-  typeBook: string;
-  id: number;
-};
+    bookName: string
+    typeBook: string
+    id: number
+}
 
-export const listBooks = signal([]);
+export const listBooks = signal<booksType[]>([])
 
-// export const ListBooksValue: booksType[] = listBooks.value;
-
-export const borrowBook = signal([]);
-export const borrowedBooks = signal([]);
-export const returnBook = signal([]);
-export const totalBorrowed = signal(0);
+export const borrowBook = signal<borrowedBooksType[]>([])
+export const borrowedBooks = signal<borrowedBooksType[]>([])
+export const totalBorrowed = computed(() => borrowedBooks.value.length)

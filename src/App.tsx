@@ -2,7 +2,7 @@ import axios from "axios";
 import Navbar from "./components/Navbar";
 import ListOfBooks from "./components/ListOfBooks";
 import ListOfBorrower from "./components/ListOfBorrowed";
-import { listBooks, borrowedBooks, totalBorrowed } from "./components/data";
+import { listBooks, borrowedBooks } from './components/data'
 import { effect } from "@preact/signals-react";
 
 const BookStore = () => {
@@ -23,8 +23,7 @@ const BookStore = () => {
     axios
       .get("http://localhost:2000/borrowed_book")
       .then((res) => {
-        borrowedBooks.value = res.data;
-        totalBorrowed.value = borrowedBooks.value.length;
+        borrowedBooks.value = res.data
       })
       .catch((err) => {
         console.log(err);
