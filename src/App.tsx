@@ -1,49 +1,53 @@
-import axios from "axios";
-import Navbar from "./components/Navbar";
-import ListOfBooks from "./components/ListOfBooks";
-import ListOfBorrower from "./components/ListOfBorrowed";
+import axios from 'axios'
+import Navbar from './components/Navbar'
+import ListOfBooks from './components/ListOfBooks'
+import ListOfBorrower from './components/ListOfBorrowed'
 import { listBooks, borrowedBooks } from './components/data'
-import { effect } from "@preact/signals-react";
+import { effect } from '@preact/signals-react'
 
 const BookStore = () => {
-  /* ----- Get Data Books ----- */
-  const getDataBooks = () => {
-    axios
-      .get("http://localhost:2000/books")
-      .then((res) => {
-        listBooks.value = res.data;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+    /**
+     * Get Books Data
+     */
+    const getDataBooks = () => {
+        axios
+            .get('http://localhost:2000/books')
+            .then(res => {
+                listBooks.value = res.data
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
 
-  /* ----- Getd Data Borrowed Books ----- */
-  const getDataBorrowed = () => {
-    axios
-      .get("http://localhost:2000/borrowed_book")
-      .then((res) => {
-        borrowedBooks.value = res.data
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+    /**
+     * Get Borrowed Books Data
+     */
+    const getDataBorrowed = () => {
+        axios
+            .get('http://localhost:2000/borrowed_book')
+            .then(res => {
+                borrowedBooks.value = res.data
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
 
-  effect(() => {
-    getDataBooks();
-    getDataBorrowed();
-  });
+    effect(() => {
+        getDataBooks()
+        getDataBorrowed()
+    })
 
-  return (
-    <>
-      <Navbar />
-      <div className="container">
-        <ListOfBooks />
-        <ListOfBorrower />
-      </div>
-    </>
-  );
-};
+    return (
+        <>
+            <Navbar />
+            <div className='container'>
+                <ListOfBooks />
+                <ListOfBorrower />
+            </div>
+        </>
+    )
+}
 
-export default BookStore;
+export default BookStore
