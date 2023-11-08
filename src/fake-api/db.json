@@ -1,0 +1,86 @@
+{
+  "books": [
+    {
+      "bookName": "Bahasa Inggris",
+      "typeBook": "English",
+      "borrowed": false,
+      "id": 1
+    },
+    {
+      "bookName": "Harry Poter 1",
+      "typeBook": "Novel",
+      "borrowed": false,
+      "id": 2
+    },
+    {
+      "bookName": "Harry Poter 2",
+      "typeBook": "Novel",
+      "borrowed": false,
+      "id": 3
+    },
+    {
+      "bookName": "Harry Poter 3",
+      "typeBook": "Novel",
+      "borrowed": false,
+      "id": 4
+    },
+    {
+      "bookName": "Naruto",
+      "typeBook": "Comic",
+      "borrowed": true,
+      "id": 5
+    },
+    {
+      "bookName": "Bleach",
+      "typeBook": "Comic",
+      "borrowed": false,
+      "id": 6
+    },
+    {
+      "bookName": "One Piece",
+      "typeBook": "Comic",
+      "borrowed": true,
+      "id": 7
+    },
+    {
+      "bookName": "The Grat Gatsby",
+      "typeBook": "Novel",
+      "borrowed": false,
+      "id": 8
+    },
+    {
+      "bookName": "Jane Eyre",
+      "typeBook": "Novel",
+      "borrowed": true,
+      "id": 9
+    },
+    {
+      "bookName": "Getting Things Done",
+      "typeBook": "Business",
+      "borrowed": true,
+      "id": 10
+    }
+  ],
+  "borrowed_book": [
+    {
+      "bookName": "One Piece",
+      "typeBook": "Comic",
+      "id": 7
+    },
+    {
+      "bookName": "Naruto",
+      "typeBook": "Comic",
+      "id": 5
+    },
+    {
+      "bookName": "Getting Things Done",
+      "typeBook": "Business",
+      "id": 10
+    },
+    {
+      "bookName": "Jane Eyre",
+      "typeBook": "Novel",
+      "id": 9
+    }
+  ]
+}

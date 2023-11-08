@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist",
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "module": "ES2020",
+      "moduleResolution": "node",
+      "target": "es6",
+      "jsx": "react-jsx",
+      "skipLibCheck": false,
+      "lib": [
+        "dom",
+        "es7"
+      ],
+    },
+    "include": [
+      "./src/**/*",
+      "**/*.ts"
+    ],
+    
+  }
